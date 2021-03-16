@@ -1,0 +1,7 @@
+description="vlasisku bots service, runs in the web container"
+after_containers=web
+needs_network=true
+name=bots
+version=1
+run_program='/home/spvlasisku/vlasisku/misc/run_bots.sh'
+stop_program='/home/spvlasisku/vlasisku/misc/stop_bots.sh'

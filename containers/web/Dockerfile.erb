@@ -1,0 +1,26 @@
+<%= "\n"*30 %>
+<%= "# YOU ARE IN THE WRONG PLACE" %>
+<%= "# YOU ARE IN THE WRONG PLACE use the ERB file" %>
+<%= "# YOU ARE IN THE WRONG PLACE" %>
+
+FROM docker.io/library/python:2.7
+
+RUN apt-get update
+RUN apt-get -y install sudo vim flex bison
+
+# Download and install jbofihe
+RUN cd /tmp ; wget https://github.com/lojban/jbofihe/archive/v0.43.tar.gz ; tar -zxvf v0.43.tar.gz
+
+RUN cd /tmp/jbofihe-0.43 ; perl config.pl --prefix=/usr/local
+RUN cd /tmp/jbofihe-0.43 ; make all
+RUN cd /tmp/jbofihe-0.43 ; make install
+
+# Download and install all the python bits
+COPY containers/web/src/requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt
+RUN pip install nose  # used to run tests, hence not really a requirement
+
+ENV TZ America/Los_Angeles
+ENV LANG en_US.UTF-8
+
+WORKDIR /srv/lojban/vlasisku

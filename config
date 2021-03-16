@@ -1,0 +1,2 @@
+service=vlasisku
+pod_args='-p 20080:8080'
