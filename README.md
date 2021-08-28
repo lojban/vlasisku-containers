@@ -57,7 +57,7 @@ Starting from stodi.lojban.org:
 	$ ssh spvlasisku@lebna
 
 Login is via ssh key, so if you think you should have access but that doesn't
-work, email webmaster@lojban.org or find rlpowell in #lojban on freenode irc.
+work, email webmaster@lojban.org or find rlpowell in #lojban on libera irc.
 
 How To Restart The Server
 -------------------------
