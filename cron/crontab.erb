@@ -11,4 +11,4 @@ MAILTO=webmaster@lojban.org
 31 */5 * * * <%= maindir %>/rebuild_images.sh
 
 # Rebuild jbovlaste database
-3 3 * * * <%= maindir %>/misc/cron_reload_db.sh
+3 3 * * * <%= maindir %>/cron/cron-run-inside.sh web /srv/lojban/vlasisku/inside_run_updatedb.sh

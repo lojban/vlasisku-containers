@@ -37,4 +37,4 @@ echo
 echo "Launching container bots inside the previous container instance"
 echo
 
-$CONTAINER_BIN exec web /srv/lojban/vlasisku/manage.py runbots
+$CONTAINER_BIN exec web /srv/lojban/vlasisku/inside_run_bots.sh

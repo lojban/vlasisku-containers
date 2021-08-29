@@ -3,4 +3,4 @@ needs_network=true
 name=web
 version=1
 run_args='-v /home/spvlasisku/vlasisku/containers/web/src:/srv/lojban/vlasisku'
-run_program='/srv/lojban/vlasisku/start_container.sh'
+run_program='/srv/lojban/vlasisku/inside_start_container.sh'
