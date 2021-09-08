@@ -1,2 +1,2 @@
-service=vlasisku
+bundle=vlasisku
 pod_args='-p 20080:8080'

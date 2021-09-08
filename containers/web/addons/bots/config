@@ -1,0 +1,4 @@
+description="vlasisku bots service, runs in the web container"
+name=bots
+run_program='/srv/lojban/vlasisku/inside_run_bots.sh'
+kill_string='runbots'
